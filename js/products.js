@@ -181,3 +181,17 @@ const products = [
     ],
   },
 ];
+
+export function getProducts() {
+  return products;
+}
+
+export function getProductsByName(name) {
+  return products.filter((p) =>
+    p.name.toLowerCase().includes(name.toLowerCase()),
+  );
+}
+
+export function getProductById(id) {
+  return products.filter((p) => p.id === id);
+}
