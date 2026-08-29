@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="nav-link">Inicio</a>
+            <a href="#" class="nav-link">Catalogo</a>
+            <a href="#" class="nav-link nav-link-active">Contacto</a>
+        </nav>
+
+        <button classs="cart-button">
+            Carrito
+        </button>
+    </header>
+
+    <main>
+        <section class="contact-info">
+            <h1>Showroom y taller</h1>
+
+            <h2>Hermanos Jota - Casa Taller</h2>
+            <p>Av. San Juan 2847</p>
+            <p>C1232AAB - Barrio de San Cristóbal</p>
+            <p>Ciudad Autónoma de Buenos Aires, Argentina</p>
+
+            <h2>Horarios</h2>
+            <ul>
+                <li>Lunes a viernes: 10:00 a 19:00.</li>
+                <li>Sábados: 10:00 a 14:00.</li>
+            </ul>
+
+            <h1>Contacto digital</h1>
+            <table>
+                <th>Canal</th>
+                <th>Datos</th>
+                <tr>
+                    <td>Sitio web</td>
+                    <td>www.hermanosjota.com.ar</td>
+                </tr>
+                <tr>
+                    <td>Email general</td>
+                    <td>info@hermanosjota.com.ar</td>
+                </tr>
+                <tr>
+                    <td>Ventas</td>
+                    <td>ventas@hermanosjota.com.ar</td>
+                </tr>
+                <tr>
+                    <td>Instagram</td>
+                    <td>@hermanosjota_ba</td>
+                </tr>
+                <tr>
+                    <td>WhatsApp</td>
+                    <td>+54 11 4567-8900</td>
+                </tr>
+            </table>
+
+        </section>
+        <h1>Formulario de contacto</h1>
+        <form action="enviar_formulario.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+</body>
+</html>
