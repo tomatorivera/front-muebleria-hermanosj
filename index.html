@@ -1,12 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mueblería Hermanos Jota - Inicio</title>
-</head>
-<body>
-  <h1>Mueblería Hermanos Jota</h1>
-  <p>Bienvenido al ecommerce de la mueblería</p>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mueblería Artesanal - Hermanos Jota</title>
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <header>
+      <nav class="container-nav" >
+        <!-- LOGO -->
+        <a href="index.html" class="logo-nav">  
+          <img src="./assets/images/logo.svg" alt="Logo">
+          <div class="text-nav">
+            <h2>Hermanos Jota</h2>
+            <p>Muebleria artesanal</p>
+          </div>
+        </a>
+          
+        <!-- NAVEGACION PRINCIPAL-->
+        <ul class="items-nav">
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="productos.html">Catálogo</a>
+          </li>
+          <li>
+            <a href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+
+        <!-- CARRITO -->
+        <a href="carrito.html" class="btn-carrito">Carrito</a>
+
+      </nav>
+    </header>
+    
+    <main>
+      <!-- HERO BANNER -->
+      <section class="container-hero-banner">
+        <div class="hero-info">
+          <h1 class="title-banner">Muebles que duran generaciones</h1>
+          <p class="text-banner">Cada pieza es concebida y ensamblada a mano en nuestro taller en Buenos aires.</p>
+          <a href="productos.html" class="btn-catalogo-banner" >Ver catálogo</a>
+        </div>
+
+        <div class="hero-img">
+          <img src="./assets/images/hero-banner.png" alt="Producto de muestra.">
+        </div>
+      </section>
+
+      <!-- PRODUCTOS DESTACADOS -->
+      <section class="container-products-destac">
+        <h2>Productos descatados</h2>
+        
+
+        <!-- <article class="producto">
+          <img src="./assets/images/sofa-patagonia.png" alt="Sofá Patagonia">
+          <h3>Sofá Patagonia</h3>
+          <p>Sofá de tres cuerpos tapizado en lino Warm Alabaster con patas cónicas de maderas.</p>
+          <p>$550.000</p>
+          <a href="#">Ver producto</a>
+        </article>
+
+        <article class="producto">
+          <img src="./assets/images/sillas-cordoba.png" alt="Sillas Córdoba">
+          <h3>Sillas Córdoba</h3>
+          <p>Set de cuatro sillas apilables en contrachapado moldeado de nogal y estructura tubular pintada en Sage Green.</p>
+          <p>$150.000</p>
+          <a href="#">Ver producto</a>
+        </article>
+
+        <article class="producto">
+          <img src="./assets/images/biblioteca-recoleta.png" loading="lazy" alt="Biblioteca Recoleta">
+          <h3>Biblioteca Recoleta</h3>
+          <p>Sistema modular de estantes abierto que combina estructura de acero Sage Green y repisas en roble claro.</p>
+          <p>$405.000</p>
+          <a href="#">Ver producto</a>
+        </article>
+
+        <article class="producto">
+          <img src="./assets/images/escritorio-costa.png" alt="Escritorio Costa">
+          <h3>Escritorio Costa</h3>
+          <p>Escritorio compacto con cajón organizado y tapa pasacables integrada en bambú laminado.</p>
+          <p>$325.000</p>
+          <a href="#">Ver producto</a>
+        </article> -->
+      </section>
+
+    </main>
+
+    <footer class="container-footer">
+      <h3>No hacemos muebles para una temporadas, los hacemos para que los herede quien venga después.</h3>
+      <!-- NAVEGACION FOOTER -->
+      <section class="footer-nav">
+        <h3>Navegación</h3>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="productos.html">Productos</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="footer-contact">
+        <h3>Contacto</h3>
+
+        <address>
+          <p>Av.San Juan 2847, San Cristóbal, CABA</p>
+          <p>+541145678900</p>
+          <p>info@hermanosjota.com.ar</p>
+        </address>
+
+      </section>
+
+      <!-- HORARIOS -->
+      <section class="footer-hours">
+        <h3>Horarios</h3>
+        <p>Lunes a Viernes: 10:00hs a 19:00hs</p>
+        <p>Sábados: 10:00hs a 14:00hs </p>
+      </section>
+
+      <section class="footer-copy">
+        <p>&copy; 2026 Hermanos Jota - Casa Taller. Todos los derechos reservados.</p>
+      </section>
+    </footer>
+
+    <script src="./js/index.js"></script>
+  </body>
 </html>
