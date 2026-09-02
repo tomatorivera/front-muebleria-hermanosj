@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visualiza tu carrito actual en la página de Mueblería Hermanos Jota">
+  <title>Carrito - Mueblería Jermanos Jota</title>
+
+  <link rel="stylesheet" href="../css/carrito.css">
+</head>
+
+<body>
+  <!-- Todo: agregar nav y footer -->
+
+  <main class="cart-page">
+    <section class="cart-heading" aria-labelledby="cart-title">
+      <p>Carrito</p>
+      <h1>Tu selección</h1>
+    </section>
+
+    <section class="cart-content" aria-label="Productos agregados al carrito">
+      <article id="empty-cart">
+        <svg class="empty-cart-icon" aria-hidden="true" viewBox="0 0 40 46" focusable="false">
+          <path d="M3 14.5h34v26a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-26Z" />
+          <path d="M4 14.5 9 4h22l5 10.5M12 22c0 4.4 3.6 8 8 8s8-3.6 8-8" />
+        </svg>
+        <h2>Tu carrito está vacío</h2>
+        <p>Explora el catálogo para encontrar tu próxima pieza</p>
+      
+        <a href="../index.html" class="button button-secondary">Ver catálogo</a>
+      </article>
+
+      <article id="not-empty-cart">
+        <h2>Productos agregados</h2>
+        
+        <ul id="product-list">
+        </ul>
+        
+        <section class="cart-summary" aria-labelledby="summary-title">
+          <div class="summary-header">
+            <h2>Total</h2>
+            <p id="total-price">$ 0.00</p>
+          </div>
+        
+          <p class="summary-message">El envío y armado se cotizan según domicilio al confirmar el pedido.</p>
+        
+          <div class="summary-actions">
+            <button class="button button-primary" type="button">Finalizar compra</button>
+            <button class="button button-secondary" type="button" id="clear-cart">Vaciar carrito</button>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <script type="module" src="../js/carrito.js"></script>
+</body>
+
+</html>
