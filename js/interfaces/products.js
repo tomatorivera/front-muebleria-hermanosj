@@ -182,16 +182,30 @@ const products = [
   },
 ];
 
+/**
+ * Obtiene todos los productos
+ * @returns {array[]}
+ */
 export function getProducts() {
   return products;
 }
 
+/**
+ * Obtiene todos los productos por nombre
+ * @param {string} name - nombre del producto
+ * @returns {array[]}
+ */
 export function getProductsByName(name) {
   return products.filter((p) =>
     p.name.toLowerCase().includes(name.toLowerCase()),
   );
 }
 
+/**
+ * Obtiene un producto por su id
+ * @param {string} id - id del producto
+ * @returns {array[]}
+ */
 export function getProductById(id) {
   return products.filter((p) => p.id === id);
 }
