@@ -1,25 +1,49 @@
-import { getCart } from "./interfaces/cart.js"
+import { getCart, updateProductQuantity, removeProductFromCart, addProductToCart } from "./interfaces/cart.js"
 
 const emptyCartSection = document.getElementById('empty-cart');
 const notEmptyCartSection = document.getElementById('not-empty-cart');
 const productList = document.getElementById('product-list');
 
 document.addEventListener('DOMContentLoaded', () => {
+  renderCart();
+})
+
+function renderCart() {
   const cart = getCart();
 
-  emptyCartSection.style.display = cart.length === 0 
-    ? "flex"
-    : "none";
+  emptyCartSection.style.display = cart.length === 0 ? "flex" : "none";
+  notEmptyCartSection.style.display = cart.length > 0 ? "block" : "none"; 
 
-  notEmptyCartSection.style.display = cart.length === 0
-    ? "none"
-    : "block"; 
+  productList.innerHTML = "";
 
-  if (cart.length > 0)
-    cart.forEach(item => {
+  if (cart.length > 0) {
+    cart.forEach((item) => {
       renderProduct(item.product, item.quantity, productList);
     });
-})
+
+    // Eventos para los botones
+    document.querySelectorAll("button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const productId = btn.closest(".cart-item").dataset.productId;
+        const currentQuantity = cart.find(item => item.product.id === productId).quantity;
+
+        switch (btn.dataset.action) {
+          case "increase":
+            updateProductQuantity(productId, currentQuantity + 1);
+            break;
+          case "decrease":
+            updateProductQuantity(productId, currentQuantity - 1);
+            break;
+          case "remove":
+            removeProductFromCart(productId);
+            break;
+        }
+
+        renderCart();
+      });
+    });
+  }
+}
 
 function renderProduct(product, quantity, parent) {
   const item = document.createElement("li");
@@ -34,15 +58,15 @@ function renderProduct(product, quantity, parent) {
       alt="Imagen del producto ${product.name}"
     >
 
-    <div class="product-info">
+    <section class="product-info">
       <h3>${product.name}</h3>
-      <p class="product-category">
-        ${product.category ?? "Muebles"}
+      <p class="product-price">
+        $ ${((product.price ?? 0) * quantity).toFixed(2)}
       </p>
-    </div>
+    </section>
 
-    <div class="product-actions">
-      <div
+    <section class="product-actions">
+      <section
         class="quantity-control"
         aria-label="Cantidad de ${product.name}"
       >
@@ -55,9 +79,9 @@ function renderProduct(product, quantity, parent) {
           −
         </button>
 
-        <span class="quantity" aria-live="polite">
+        <p class="quantity" aria-live="polite">
           ${quantity}
-        </span>
+        </p>
 
         <button
           class="quantity-button"
@@ -67,12 +91,8 @@ function renderProduct(product, quantity, parent) {
         >
           +
         </button>
-      </div>
-    </div>
-
-    <p class="product-price">
-      $ ${((product.price ?? 0) * quantity).toFixed(2)}
-    </p>
+      </section>
+    </section>
 
     <button
       class="remove-button"
@@ -81,7 +101,7 @@ function renderProduct(product, quantity, parent) {
       aria-label="Quitar ${product.name} del carrito"
     >
       <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
-        <path d="M8 8v10m4-10v10m4-10v10M5 6h14m-9-3h4l1 3H9l1-3Zm-4 3 1 14h8l1-14" />
+        <path d="M9 3h6l1 2h5v2H3V5h5l1-2Zm-3 6h12l-1 10a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 9Z"/>
       </svg>
     </button>
   `;
