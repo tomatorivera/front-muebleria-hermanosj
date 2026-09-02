@@ -40,6 +40,22 @@ export function getCart() {
 }
 
 /**
+ * Obtiene la cantidad actual de un producto en el carrito
+ * 
+ * @param {string} productId - id del producto
+ * @returns {number}
+ */
+export function getCurrentQuantity(productId) {
+  const cart = getCart();
+  const productIndex = cart.findIndex((item) => item.product.id === productId);
+
+  if (productIndex === -1)
+    return 0;
+
+  return cart[productIndex].quantity;
+}
+
+/**
  * Añade un producto al carrito
  * 
  * @param {*} product - producto a agregar

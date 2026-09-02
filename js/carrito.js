@@ -1,4 +1,4 @@
-import { getCart, updateProductQuantity, removeProductFromCart, addProductToCart } from "./interfaces/cart.js"
+import { getCart, getCurrentQuantity, updateProductQuantity, removeProductFromCart, addProductToCart, getCurrentQuantity } from "./interfaces/cart.js"
 
 const emptyCartSection = document.getElementById('empty-cart');
 const notEmptyCartSection = document.getElementById('not-empty-cart');
@@ -25,7 +25,7 @@ function renderCart() {
     document.querySelectorAll("button").forEach((btn) => {
       btn.addEventListener("click", () => {
         const productId = btn.closest(".cart-item").dataset.productId;
-        const currentQuantity = cart.find(item => item.product.id === productId).quantity;
+        const currentQuantity = getCurrentQuantity(productId);
 
         switch (btn.dataset.action) {
           case "increase":
