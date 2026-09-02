@@ -1,82 +1,12 @@
-/* ============================================
-   HERMANOS JOTA — Carrito de compras
-   El carrito es un array de productos:
-   [{ id, nombre, precio, cantidad }, ...]
-   Se guarda en localStorage para que el número
-   se mantenga al pasar de una página a otra.
-   ============================================ */
+import { getCart } from "./interfaces/cart.js";
 
-const CART_STORAGE_KEY = 'hermanosJotaCarrito';
-
-// Lee el array del carrito desde localStorage
-function obtenerCarrito() {
-    const data = localStorage.getItem(CART_STORAGE_KEY);
-    return data ? JSON.parse(data) : [];
-}
-
-// Guarda el array del carrito y refresca el número en el botón
-function guardarCarrito(carrito) {
-    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(carrito));
-    actualizarBadge();
-}
-
-// Suma las cantidades de todos los productos del array
-function contarProductos(carrito = obtenerCarrito()) {
-    return carrito.reduce((total, item) => total + (item.cantidad || 1), 0);
-}
-
-// Agrega un producto. Si ya existe (mismo id), suma la cantidad.
-// producto = { id, nombre, precio, cantidad }
-function agregarProducto(producto) {
-    const carrito = obtenerCarrito();
-    const existente = carrito.find((item) => item.id === producto.id);
-
-    if (existente) {
-        existente.cantidad = (existente.cantidad || 1) + (producto.cantidad || 1);
-    } else {
-        carrito.push({ ...producto, cantidad: producto.cantidad || 1 });
-    }
-
-    guardarCarrito(carrito);
-}
-
-// Quita un producto del array por id
-function quitarProducto(id) {
-    const carrito = obtenerCarrito().filter((item) => item.id !== id);
-    guardarCarrito(carrito);
-}
-
-// Cambia la cantidad de un producto puntual
-function actualizarCantidad(id, cantidad) {
-    const carrito = obtenerCarrito();
-    const item = carrito.find((p) => p.id === id);
-    if (!item) return;
-
-    if (cantidad <= 0) {
-        quitarProducto(id);
-        return;
-    }
-
-    item.cantidad = cantidad;
-    guardarCarrito(carrito);
-}
-
-function vaciarCarrito() {
-    guardarCarrito([]);
-}
-
-// Dibuja/actualiza el número sobre el botón "Carrito"
+// --- Contador del carrito en el header ---
 function actualizarBadge() {
-    const boton = document.querySelector('.cart-button, header button');
+    const boton = document.querySelector('.cart-button');
     if (!boton) return;
 
-    const cantidad = contarProductos();
+    const cantidad = getCart().reduce((total, item) => total + item.quantity, 0);
     let badge = boton.querySelector('.cart-badge');
-
-    if (cantidad === 0) {
-        if (badge) badge.remove();
-        return;
-    }
 
     if (!badge) {
         badge = document.createElement('span');
@@ -89,13 +19,56 @@ function actualizarBadge() {
 
 document.addEventListener('DOMContentLoaded', actualizarBadge);
 
-// Se expone para poder agregar/quitar productos desde otras páginas
-// (por ejemplo, desde el catálogo al tocar "Agregar al carrito")
-window.Carrito = {
-    agregar: agregarProducto,
-    quitar: quitarProducto,
-    actualizarCantidad,
-    vaciar: vaciarCarrito,
-    obtener: obtenerCarrito,
-    contar: contarProductos,
-};
+// --- Formulario de contacto ---
+const formulario = document.querySelector('form');
+
+formulario.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    if (!validarFormulario(nombre, email, mensaje)) return;
+
+    mostrarMensajeExito();
+    formulario.reset();
+});
+
+function validarFormulario(nombre, email, mensaje) {
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!nombre || !email || !mensaje) {
+        mostrarError('Completá todos los campos.');
+        return false;
+    }
+
+    if (!emailValido) {
+        mostrarError('Ingresá un email válido.');
+        return false;
+    }
+
+    return true;
+}
+
+function mostrarError(texto) {
+    let aviso = document.getElementById('form-aviso');
+    if (!aviso) {
+        aviso = document.createElement('p');
+        aviso.id = 'form-aviso';
+        formulario.appendChild(aviso);
+    }
+    aviso.className = 'form-error';
+    aviso.textContent = texto;
+}
+
+function mostrarMensajeExito() {
+    let aviso = document.getElementById('form-aviso');
+    if (!aviso) {
+        aviso = document.createElement('p');
+        aviso.id = 'form-aviso';
+        formulario.appendChild(aviso);
+    }
+    aviso.className = 'form-success';
+    aviso.textContent = '¡Gracias! Te vamos a responder a la brevedad.';
+}
