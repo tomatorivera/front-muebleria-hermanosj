@@ -134,6 +134,7 @@ body {
 .cart-heading {
   text-transform: uppercase;
   color: var(--siena-tostado);
+  padding-bottom: 1em;
   border-bottom: 1px solid var(--borde);
 }
 
