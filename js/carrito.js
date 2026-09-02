@@ -1,4 +1,4 @@
-import { getCart, getCurrentQuantity, updateProductQuantity, removeProductFromCart, addProductToCart, getCurrentQuantity } from "./interfaces/cart.js"
+import { getCart, getCurrentQuantity, getTotalPrice, clearCart, updateProductQuantity, removeProductFromCart } from "./interfaces/cart.js"
 
 const emptyCartSection = document.getElementById('empty-cart');
 const notEmptyCartSection = document.getElementById('not-empty-cart');
@@ -6,6 +6,11 @@ const productList = document.getElementById('product-list');
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCart();
+
+  document.getElementById("clear-cart").addEventListener("click", () => {
+    clearCart();
+    renderCart();
+  });
 })
 
 function renderCart() {
@@ -15,6 +20,7 @@ function renderCart() {
   notEmptyCartSection.style.display = cart.length > 0 ? "block" : "none"; 
 
   productList.innerHTML = "";
+  document.getElementById("total-price").innerHTML = `$ ${getTotalPrice().toFixed(2)}`;
 
   if (cart.length > 0) {
     cart.forEach((item) => {

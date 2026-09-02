@@ -56,6 +56,18 @@ export function getCurrentQuantity(productId) {
 }
 
 /**
+ * Obtiene el precio total del carrito
+ * @returns {number}
+ */
+export function getTotalPrice() {
+  const cart = getCart();
+  return cart.reduce(
+    (total, item) => total + (item.product.price * item.quantity), 
+    0
+  );
+}
+
+/**
  * Añade un producto al carrito
  * 
  * @param {*} product - producto a agregar
