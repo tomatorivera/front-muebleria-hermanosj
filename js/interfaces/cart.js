@@ -62,8 +62,8 @@ export function getCurrentQuantity(productId) {
 export function getTotalPrice() {
   const cart = getCart();
   return cart.reduce(
-    (total, item) => total + (item.product.price * item.quantity), 
-    0
+    (total, item) => total + (item.product.price ?? 0) * item.quantity,
+    0,
   );
 }
 

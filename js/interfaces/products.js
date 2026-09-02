@@ -3,6 +3,7 @@ const products = [
     id: "aparador-uspallata",
     name: "Aparador Uspallata",
     image: "assets/images/aparador-uspallata.png",
+    price: 40000,
     description:
       "Aparador de seis puertas fabricado en nogal sostenible con tiradores metálicos en acabado latón. Su silueta minimalista realza el veteado natural de la madera, creando una pieza que combina funcionalidad y elegancia atemporal para espacios contemporáneos.",
     details: [
@@ -19,6 +20,7 @@ const products = [
   {
     id: "biblioteca-recoleta",
     name: "Biblioteca Recoleta",
+    price: 65300,
     image: "assets/images/biblioteca-recoleta.png",
     description:
       "Sistema modular de estantes abierto que combina estructura de acero Sage Green y repisas en roble claro. Perfecta para colecciones y objetos de diseño, su diseño versátil se adapta a cualquier espacio contemporáneo con elegancia funcional.",
@@ -36,6 +38,7 @@ const products = [
   {
     id: "butaca-mendoza",
     name: "Butaca Mendoza",
+    price: 45230,
     image: "assets/images/butaca-mendoza.png",
     description:
       "Butaca tapizada en bouclé Dusty Rose con base de madera de guatambú. El respaldo curvo abraza el cuerpo y ofrece máximo confort, mientras que su diseño orgánico aporta calidez y sofisticación a cualquier ambiente contemporáneo.",
@@ -50,6 +53,7 @@ const products = [
   {
     id: "sillon-copacabana",
     name: "Sillón Copacabana",
+    price: 58999,
     image: "assets/images/sillon-copacabana.png",
     description:
       "Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspirado en la estética brasilera moderna de los 60, combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas.",
@@ -67,6 +71,7 @@ const products = [
   {
     id: "mesa-de-centro-araucaria",
     name: "Mesa de Centro Araucaria",
+    price: 69850,
     image: "assets/images/mesa-de-centro-araucaria.png",
     description:
       "Mesa de centro con sobre circular de mármol Patagonia y base de tres patas en madera de nogal. Su diseño minimalista se convierte en el punto focal perfecto para cualquier sala de estar contemporánea, combinando la frialdad del mármol con la calidez de la madera.",
@@ -87,6 +92,7 @@ const products = [
   {
     id: "mesa-de-noche-aconcagua",
     name: "Mesa de Noche Aconcagua",
+    price: 48920,
     image: "assets/images/mesa-de-noche-aconcagua.png",
     description:
       "Mesa de noche con cajón oculto y repisa inferior en roble certificado FSC®. Su diseño limpio y funcional permite convivir con diferentes estilos de dormitorio, ofreciendo almacenamiento discreto y elegante para objetos personales.",
@@ -104,6 +110,7 @@ const products = [
   {
     id: "sofa-patagonia",
     name: "Sofá Patagonia",
+    price: 86700,
     image: "assets/images/sofa-patagonia.png",
     description:
       "Sofá de tres cuerpos tapizado en lino Warm Alabaster con patas cónicas de madera. Los cojines combinan espuma de alta resiliencia con plumón reciclado, ofreciendo comodidad duradera y sostenible para el hogar moderno.",
@@ -121,6 +128,7 @@ const products = [
   {
     id: "mesa-comedor-pampa",
     name: "Mesa Comedor Pampa",
+    price: 45000,
     image: "assets/images/mesa-comedor-pampa.png",
     description:
       "Mesa extensible de roble macizo con tablero biselado y sistema de apertura suave. Su diseño robusto y elegante se adapta perfectamente a reuniones íntimas o grandes celebraciones familiares, extendiéndose de 6 a 10 comensales.",
@@ -138,6 +146,7 @@ const products = [
   {
     id: "sillas-cordoba",
     name: "Sillas Córdoba",
+    price: 51000,
     image: "assets/images/sillas-cordoba.png",
     description:
       "Set de cuatro sillas apilables en contrachapado moldeado de nogal y estructura tubular pintada en Sage Green. Su diseño ergonómico y materials de calidad garantizan comodidad y durabilidad en el uso diario, perfectas para comedores contemporáneos.",
@@ -155,6 +164,7 @@ const products = [
   {
     id: "escritorio-costa",
     name: "Escritorio Costa",
+    price: 43300,
     image: "assets/images/escritorio-costa.png",
     description:
       "Escritorio compacto con cajón organizado y tapa pasacables integrada en bambú laminado. Ideal para espacios de trabajo en casa, combina funcionalidad moderna con estética minimalista y sostenible, perfecto para el trabajo remoto.",
@@ -169,6 +179,7 @@ const products = [
   {
     id: "silla-de-trabajo-belgrano",
     name: "Silla de Trabajo Belgrano",
+    price: 35220,
     image: "assets/images/silla-de-trabajo-belgrano.png",
     description:
       "Silla ergonómica regulable en altura con respaldo de malla transpirable y asiento tapizado en tejido reciclado. Diseñada para largas jornadas de trabajo con máximo confort y apoyo lumbar, ideal para oficinas en casa y espacios de coworking.",

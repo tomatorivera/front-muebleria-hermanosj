@@ -1,4 +1,4 @@
-import { getCart, getCurrentQuantity, getTotalPrice, clearCart, updateProductQuantity, removeProductFromCart } from "./interfaces/cart.js"
+import { getCart, getCurrentQuantity, getTotalPrice, clearCart, updateProductQuantity, removeProductFromCart, addProductToCart } from "./interfaces/cart.js"
 
 const emptyCartSection = document.getElementById('empty-cart');
 const notEmptyCartSection = document.getElementById('not-empty-cart');
@@ -20,7 +20,7 @@ function renderCart() {
   notEmptyCartSection.style.display = cart.length > 0 ? "block" : "none"; 
 
   productList.innerHTML = "";
-  document.getElementById("total-price").innerHTML = `$ ${getTotalPrice().toFixed(2)}`;
+  document.getElementById("total-price").innerHTML = `$ ${getTotalPrice().toLocaleString('es-AR')}`;
 
   if (cart.length > 0) {
     cart.forEach((item) => {
@@ -67,7 +67,7 @@ function renderProduct(product, quantity, parent) {
     <section class="product-info">
       <h3>${product.name}</h3>
       <p class="product-price">
-        $ ${((product.price ?? 0) * quantity).toFixed(2)}
+        $ ${((product.price ?? 0) * quantity).toLocaleString('es-AR')}
       </p>
     </section>
 
