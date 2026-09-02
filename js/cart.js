@@ -1,3 +1,5 @@
+import { getProducts } from './products.js';
+
 const STORAGE_KEY = 'cart'
 
 // Estructura del objeto carrito:
