@@ -1,116 +1,112 @@
-/* ---------- MAIN / LAYOUT ---------- */
-main {
-    max-width: 900px;
+/* ---------- LAYOUT DE DOS COLUMNAS ---------- */
+.contact-columns {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 56px 24px 80px;
+    flex-wrap: wrap;
 }
 
-h1 {
+.contact-details {
+    flex: 1 1 320px;
+}
+
+.section-title {
     font-family: var(--font-secundaria);
     font-weight: 700;
-    font-size: 28pt;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-size: 18pt;
     color: var(--siena-tostado);
-    margin: 48px 0 24px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid var(--vara-de-oro);
+    margin: 0 0 24px;
 }
 
-main > h1:first-of-type,
-.contact-info > h1:first-child {
-    margin-top: 0;
+.contact-details .section-title:not(:first-child) {
+    margin-top: 40px;
 }
 
-h2 {
-    font-family: var(--font-secundaria);
-    font-weight: 700;
-    font-size: 16pt;
-    color: var(--text-principal);
-    margin: 32px 0 12px;
+/* ---------- FILAS CON ÍCONO (dirección, horarios) ---------- */
+.info-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
 }
 
-p {
-    margin: 0 0 4px;
-    font-size: 11pt;
+.icon-circle {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(160, 82, 45, 0.1);
+    border-radius: 50%;
+    color: var(--siena-tostado);
+}
+
+.icon-circle svg {
+    width: 18px;
+    height: 18px;
+}
+
+.info-row p {
+    margin: 0 0 2px;
+    font-size: 10.5pt;
     color: var(--text-secundario);
 }
 
-/* ---------- CONTACT INFO ---------- */
-.contact-info {
-    background-color: #FFFFFF;
-    border: 1px solid var(--borde);
-    border-left: 4px solid var(--siena-tostado);
-    border-radius: 8px;
-    padding: 8px 32px 32px;
-    margin-bottom: 16px;
+.info-row .info-title {
+    font-family: var(--font-primaria);
+    font-weight: 600;
+    color: var(--text-principal);
+    margin-bottom: 4px;
 }
 
-.contact-info ul {
+/* ---------- CONTACTO DIGITAL (lista con íconos) ---------- */
+.contact-list {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
-.contact-info li {
-    font-size: 11pt;
-    color: var(--text-secundario);
-    padding: 6px 0;
-    border-bottom: 1px solid var(--borde);
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10.5pt;
+    color: var(--vara-de-oro);
 }
 
-.contact-info li:last-child {
-    border-bottom: none;
+.contact-list li svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
 }
 
-/* ---------- TABLA DE CONTACTO DIGITAL ---------- */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 8px;
-    font-size: 11pt;
+/* ---------- TARJETA DEL FORMULARIO ---------- */
+.contact-form-card {
+    flex: 1 1 360px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    padding: 32px;
 }
 
-th {
-    text-align: left;
-    font-family: var(--font-primaria);
-    font-weight: 500;
-    font-size: 9pt;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #FFFFFF;
-    background-color: var(--siena-tostado);
-    padding: 10px 16px;
+.contact-form-card h2 {
+    font-family: var(--font-secundaria);
+    font-weight: 700;
+    font-size: 18pt;
+    color: var(--siena-tostado);
+    margin: 0 0 24px;
 }
 
-th:first-child {
-    border-top-left-radius: 6px;
-}
-
-th:last-child {
-    border-top-right-radius: 6px;
-}
-
-td {
-    padding: 10px 16px;
-    color: var(--text-principal);
-    border-bottom: 1px solid var(--borde);
-}
-
-tr:nth-child(even) td {
-    background-color: var(--alabastro);
-}
-
-/* ---------- FORMULARIO ---------- */
 form {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    background-color: #FFFFFF;
-    border: 1px solid var(--borde);
-    border-radius: 8px;
-    padding: 32px;
-    margin-top: 8px;
 }
 
 form label {
@@ -130,7 +126,7 @@ form textarea {
     color: var(--text-principal);
     background-color: var(--alabastro);
     border: 1px solid var(--borde);
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 12px 14px;
     margin-top: 6px;
     resize: vertical;
@@ -154,9 +150,12 @@ form textarea:focus {
 }
 
 form button {
-    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     font-family: var(--font-primaria);
-    font-weight: 700;
+    font-weight: 500;   /* antes: 700 — el manual pide Medium para CTAs */
     font-size: 10.5pt;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -170,40 +169,24 @@ form button {
     transition: background-color 0.2s ease;
 }
 
+form button svg {
+    width: 16px;
+    height: 16px;
+}
+
 form button:hover {
     background-color: #8A4424;
 }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 640px) {
-    main {
+    .contact-columns {
         padding: 40px 16px 56px;
+        gap: 32px;
     }
 
-    h1 {
-        font-size: 22pt;
-    }
-
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-        display: block;
-    }
-
-    th {
-        display: none;
-    }
-
-    td {
-        padding: 8px 4px;
-        border: none;
-    }
-
-    tr {
-        border-bottom: 1px solid var(--borde);
-        padding: 8px 0;
+    .section-title,
+    .contact-form-card h2 {
+        font-size: 15pt;
     }
 }
