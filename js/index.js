@@ -1,40 +1,31 @@
+import { getProducts } from "./data/productos.js";
+
 async function cargarProductos() {
 
-    const contenedor = document.getElementById("container-products-destac");
+    const contenedor = document.getElementById("contenedor-destac");
 
     try {
-        const url = "../assets/datos/productos.json";
-        const respuesta = await fetch(url);
-        console.log(respuesta)
+        const productos = await getProducts();
 
-        if (!respuesta.ok) {
-            throw new Error("No se pudieron cargar los productos");
-        }
-
-        const productos = await respuesta.json();
-            console.log(productos)
         productos.forEach(producto => {
 
             const article = document.createElement("article");
-
+            article.classList.add("producto");
             article.innerHTML = `
-                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <img src="${producto.image}" alt="${producto.name}">
                 
-                <h3>${producto.nombre}</h3>
-                
-                
-                <button>
+                <h3>${producto.name}</h3>
+                <p>Precio: ${producto.price}</p>
                 <a href="#">Ver producto</a>
-                </button>
                 `;
-                
+
                 contenedor.appendChild(article);
             });
             
         } catch (error) {
             console.error(error);
         }
-    }
+}
     
-    cargarProductos();
+await cargarProductos();
     
