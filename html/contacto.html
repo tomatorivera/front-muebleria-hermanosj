@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+    <header>
+        <img src="../assets/images/logo.svg" alt="Logo de Mueblería Hermanos Jota" class="logo">
+        <nav>
+            <a href="../index.html" class="nav-link">Inicio</a>
+            <a href="../html/catalogo.html" class="nav-link">Catalogo</a>
+            <a href="../html/contacto.html" class="nav-link nav-link-active">Contacto</a>
+            <a href="../html/carrito.html" class="cart-button">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-columns">
+
+            <article class="contact-details">
+                <h2 class="section-title">Casa Taller</h2>
+
+                <address class="info-row">
+                    <span class="icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 21s7-7.58 7-12a7 7 0 1 0-14 0c0 4.42 7 12 7 12z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                    </span>
+                    <div>
+                        <p class="info-title">Av. San Juan 2847</p>
+                        <p>C1232AAB — Barrio de San Cristóbal</p>
+                        <p>Ciudad Autónoma de Buenos Aires, Argentina</p>
+                    </div>
+                </address>
+
+                <section class="info-row">
+                    <span class="icon-circle">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="9"/>
+                            <path d="M12 7v5l3 3"/>
+                        </svg>
+                    </span>
+                    <div>
+                        <p class="info-title">Horarios</p>
+                        <p>Lunes a viernes: 10:00 — 19:00</p>
+                        <p>Sábados: 10:00 — 14:00</p>
+                    </div>
+                </section>
+
+                <h2 class="section-title">Contacto digital</h2>
+                <address>
+                    <ul class="contact-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                            info@hermanosjota.com.ar
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                            ventas@hermanosjota.com.ar
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .56 3.5 1 1 0 0 1-.25 1z"/></svg>
+                            +54 11 4567-8900 (WhatsApp)
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+                            @hermanosjota_ba
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></svg>
+                            www.hermanosjota.com.ar
+                        </li>
+                    </ul>
+                </address>
+            </article>
+
+            <section class="contact-form-card" aria-labelledby="form-title">
+                <h2 id="form-title">Escribinos</h2>
+                <form action="enviar_formulario.php" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Contanos en qué podemos ayudarte..." required></textarea>
+
+                    <button type="submit">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+                        Enviar mensaje
+                    </button>
+                </form>
+            </section>
+
+        </section>
+    </main>
+    <script type="module" src="../js/contacto.js"></script>
+</body>
+</html>
