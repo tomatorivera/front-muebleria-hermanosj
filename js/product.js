@@ -86,16 +86,8 @@ function renderProduct(product) {
 function renderNotFound() {
   document.title = "Producto no encontrado - Mueblería Hermanos Jota";
 
-  const heading = document.createElement("section");
-  heading.className = "product-heading";
-
-  const eyebrow = document.createElement("p");
-  eyebrow.textContent = "Producto";
-
   const title = document.createElement("h1");
   title.textContent = "Detalle";
-
-  heading.append(eyebrow, title);
 
   const empty = document.createElement("section");
   empty.className = "product-not-found";
@@ -104,8 +96,7 @@ function renderNotFound() {
   emptyTitle.textContent = "No encontramos esa pieza";
 
   const emptyText = document.createElement("p");
-  emptyText.textContent =
-    "El enlace puede estar incompleto o el producto ya no forma parte del catálogo.";
+  emptyText.textContent = "El enlace puede estar incompleto o el producto ya no forma parte del catálogo.";
 
   const homeLink = document.createElement("a");
   homeLink.className = "button button-secondary";
