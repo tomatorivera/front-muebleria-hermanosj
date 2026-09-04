@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo | Hermanos Jota</title>
+    <link rel="stylesheet" href="../css/catalogo.css">
+</head>
+<body>
+
+    <!--header y navegacion-->
+    <header class="header">
+
+        <div class="header-container">
+        
+            <!--logo-->
+            <a href="../index.html" class="logo"> 
+            
+                <div class="logo-icon">
+                    <img src="../assets/images/logo.svg" alt="logo Hermanos Jota">
+                </div>
+            
+                <div class="logo-text">
+                    <p>hermanos jota</p>
+                    <p>muebleria artesanal</p>
+                </div>
+
+            </a>
+
+            <!--navegacion-->
+            <nav class="navbar">
+
+                <ul class="nav-list">
+
+                    <li>
+                        <a href="../index.html">inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="catalogo.html">catalogo</a>
+                    </li>
+
+                    <li>
+                        <a href="contacto.html">contacto</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!--boton de carrito a la derecha-->
+            <a href="carrito.html" class="cart-button">mi carrito</a>
+
+        </div>
+
+
+    </header>
+
+    <!--contenido principal-->
+    <main>
+
+        <section class="catalog-hero">
+
+            <div class="catalog-hero-container">
+
+                <!--etiqueta de descripcion-->
+                <div class="page-label">
+                    catalogo
+                </div>
+                
+                <!--info-->
+                <div class="hero-content">
+                    <h1>todos los muebles</h1>
+                    <p>
+                        Explora nuestra coleccion de piezas de autor. Cada mueble es fabricado a mano bajo pedido en nuestro taller.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--muestra de productos-->
+        <section class="catalog">
+
+            <div class="catalog-container">
+
+                <!--buscador-->
+                <div class="search-container">
+                    <label for="search" class="search-only">buscar</label>
+
+                    <input type="search" id="search" class="search-input" placeholder="Buscar por nombre, categoria o descripcion...">
+                </div>
+
+                <!--filtro-->
+                <div class="catalog-filters">
+
+                    <button type="button" class="filter-button active" data-category="todos">
+                        todos
+                    </button>
+
+                    <button type="button" class="filter-button" data-category="categoria1">categoria1</button>
+                    <button type="button" class="filter-button" data-category="categoria2">categoria2</button>
+                    <button type="button" class="filter-button" data-category="categoria3">categoria3</button>
+
+                </div>
+
+                <!--cantidad de resultados-->
+                <p id="results-count" class="results-count"></p>
+
+                <!--grilla de productos-->
+                <div id="catalog-grid" class="catalog-grid">
+                    <!--aca se generan las tarjetas con js-->
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!--logo y marca-->
+            <div class="footer-brand">
+
+                <a href="../index.html" class="footer-logo">
+                    <div class="logo-icon">
+                        <img src="../assets/images/logo.svg" alt="logo hermanos jota">
+                    </div>
+                    <p>muebleria hermanos jota</p>
+                </a>
+
+                <p>muebles de autor, hechos a mano en Buenos Aires desde 1988</p>
+
+            </div>
+
+            <!--navegacion-->
+            <div class="footer-column">
+                <h3>navegacion</h3>
+
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="catalogo.html">catalogo</a>
+                    </li>
+
+                    <li>
+                        <a href="contacto.html">contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--contacto-->
+            <div class="footer-column">
+                <h3>contacto</h3>
+                <ul>
+                    <li>direccion</li>
+                    <li>numero de telefono</li>
+                    <li>correo electronico</li>
+                </ul>
+            </div>
+
+            <!--horarios-->
+            <div class="footer-column">
+                <h3>horarios</h3>
+
+                <p>Lunes a Viernes de <span class="highlight">10:00 - 19:00</span></p>
+                <p>Sabados <span class="highlight">10:00 - 14:00</span></p>
+            </div>
+
+            <!--copyright-->
+            <div class="footer-bottom">
+                <p>
+                    Mi marca. Todos los derechos reservados
+                </p>
+            </div>
+
+        </div>
+    </footer>
+    <script type="module" src="../js/catalogo.js"></script>
+</body>
+</html>
