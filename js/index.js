@@ -7,7 +7,7 @@ async function cargarProductos() {
     try {
         const productos = await getProducts();
 
-        productos.forEach(producto => {
+        productos.slice(0,4).forEach(producto => {
 
             const article = document.createElement("article");
             article.classList.add("producto");
