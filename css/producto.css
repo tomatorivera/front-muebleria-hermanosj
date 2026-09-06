@@ -1,0 +1,8 @@
+body{
+    background-color:#F5E6D3;
+
+}
+#product-page{
+    display: flex;
+    flex-direction:column;
+}
