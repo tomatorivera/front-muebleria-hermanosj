@@ -42,7 +42,8 @@ function renderProduct(product) {
   product.details.forEach((detail) => {
     const row = document.createElement("tr");
     const titleCell = document.createElement("th");
-    titleCell.textContent = detail.title;
+    titleCell.classList.add('th');
+    titleCell.textContent = `${detail.title}: `;
     const descriptionCell = document.createElement("td");
     descriptionCell.textContent = detail.description;
     row.append(titleCell,descriptionCell);
