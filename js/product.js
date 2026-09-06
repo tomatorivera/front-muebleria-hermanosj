@@ -23,6 +23,7 @@ function renderProduct(product) {
   titulo.textContent = product.name;
   const imagen = document.querySelector('#image-product');
   imagen.src= product.image;
+  imagen.alt=product.name;
   const descripcion = document.querySelector('#description-product');
   descripcion.textContent = product.description;
   const precio = document.querySelector('#price-product');
