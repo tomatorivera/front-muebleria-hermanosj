@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de Mueblería Hermanos Jota: muebles de autor fabricados a mano bajo pedido en nuestro taller de Buenos Aires.">
+    <title>Catálogo - Mueblería Hermanos Jota</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/catalogo.css">
+</head>
+
+<body>
+    <!-- Todo: agregar footer (lo hace Karen) -->
+    <header>
+        <img src="../assets/images/logo.svg" alt="Logo de Mueblería Hermanos Jota" class="logo">
+        <nav>
+            <a href="../index.html" class="nav-link">Inicio</a>
+            <a href="../html/catalogo.html" class="nav-link nav-link-active" aria-current="page">Catalogo</a>
+            <a href="../html/contacto.html" class="nav-link">Contacto</a>
+            <a href="../html/carrito.html" class="cart-button">Carrito</a>
+        </nav>
+    </header>
+
+    <main class="catalog-page">
+
+        <!-- Presentación del catálogo -->
+        <section class="catalog-hero" aria-labelledby="catalog-title">
+            <p class="page-label">Catálogo</p>
+            <h1 id="catalog-title">Todos los muebles</h1>
+            <p>
+                Explora nuestra colección de piezas de autor. Cada mueble es
+                fabricado a mano bajo pedido en nuestro taller.
+            </p>
+        </section>
+
+        <!-- Grilla de productos -->
+        <section class="catalog" aria-labelledby="products-title">
+            <h2 id="products-title" class="visually-hidden">Productos</h2>
+
+            <!-- El campo de búsqueda lo implementa Gastón.
+                 Solo por nombre: products.js todavía no tiene categoría. -->
+            <form class="search-container" role="search">
+                <label for="catalog-search" class="visually-hidden">Buscar productos</label>
+                <input
+                    type="search"
+                    id="catalog-search"
+                    class="search-input"
+                    placeholder="Buscar por nombre..."
+                    autocomplete="off"
+                >
+            </form>
+
+            <!-- Estado de carga y cantidad de resultados -->
+            <p id="results-count" class="results-count" aria-live="polite"></p>
+
+            <!-- Las tarjetas (cada una en un <li>) se generan desde js/catalogo.js -->
+            <ul id="catalog-grid" class="catalog-grid"></ul>
+        </section>
+
+    </main>
+
+    <script type="module" src="../js/catalogo.js"></script>
+</body>
+
+</html>
