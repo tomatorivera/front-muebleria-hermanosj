@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'inter', 'sans-serif';
+    font-size: 12pt;
+}
+body{
+    background-color:#F5E6D3;
+
+}
+#product-page{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1%;
+    gap:1%;
+}
+h1{
+    color:#A0522D;
+}
+h1,h2{
+    font-style:bold;
+}
+#carrito{
+    font-style: medium;
+    background-color:#87A96B;
+}
+#details-product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align:left;
+    border-color:#D4A437;
+    border-radius: 5%;
+}
+.th{
+    font-style: medium;
+    color:#D4A437;
+}
+
+a{
+    font-family: 'Playfair Display', 'Georgia';
+    color:black;
+    font-size: 12pt;
+}
+img{
+    width:40%;
+}
