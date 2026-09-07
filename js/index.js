@@ -16,7 +16,7 @@ async function cargarProductos() {
                 
                 <h3>${producto.name}</h3>
                 <p>Precio: ${producto.price}</p>
-                <a href="#">Ver producto</a>
+                <a href="/html/producto.html?id=${producto.id}">Ver producto</a>
                 `;
 
                 contenedor.appendChild(article);
