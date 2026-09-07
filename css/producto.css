@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family:'inter', 'sans-serif';
+    
     font-size: 12pt;
 }
 body{
@@ -40,7 +40,7 @@ h1,h2{
     color:#D4A437;
 }
 
-a{
+a:not(".items-nav > a"){
     font-family: 'Playfair Display', 'Georgia';
     color:black;
     

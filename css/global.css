@@ -100,21 +100,6 @@ body {
     padding: 20px;
 }
 
-/* BOTON CARRITO */
-.btn-carrito {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #A0522D;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.btn-carrito:hover {
-    background-color: #d9a77a;
-}
-
 /* SECCION HERO BANNER ------------------------*/
 
 .container-hero-banner{
