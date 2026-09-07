@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de Mueblería Hermanos Jota: muebles de autor fabricados a mano bajo pedido en nuestro taller de Buenos Aires.">
+    <title>Catálogo - Mueblería Hermanos Jota</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/catalogo.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container-nav">
+            <!-- LOGO -->
+            <a href="index.html" class="logo-nav">
+                <img src="../assets/images/logo.svg" alt="Logo">
+                <div class="text-nav">
+                    <h2>Hermanos Jota</h2>
+                    <p>Muebleria artesanal</p>
+                </div>
+            </a>
+    
+            <!-- NAVEGACION PRINCIPAL-->
+            <ul class="items-nav">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="catalogo.html">Catálogo</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+    
+            <!-- CARRITO -->
+            <a href="carrito.html" class="cart-button">Carrito</a>
+    
+        </nav>
+    </header>
+
+    <main class="catalog-page">
+
+        <!-- Presentación del catálogo -->
+        <section class="catalog-hero" aria-labelledby="catalog-title">
+            <p class="page-label">Catálogo</p>
+            <h1 id="catalog-title">Todos los muebles</h1>
+            <p>
+                Explora nuestra colección de piezas de autor. Cada mueble es
+                fabricado a mano bajo pedido en nuestro taller.
+            </p>
+        </section>
+
+        <!-- Grilla de productos -->
+        <section class="catalog" aria-labelledby="products-title">
+            <h2 id="products-title" class="visually-hidden">Productos</h2>
+
+            <!-- El campo de búsqueda lo implementa Gastón.
+                 Solo por nombre: products.js todavía no tiene categoría. -->
+            <form class="search-container" role="search">
+                <label for="catalog-search" class="visually-hidden">Buscar productos</label>
+                <input
+                    type="search"
+                    id="catalog-search"
+                    class="search-input"
+                    placeholder="Buscar por nombre..."
+                    autocomplete="off"
+                >
+            </form>
+
+            <!-- Estado de carga y cantidad de resultados -->
+            <p id="results-count" class="results-count" aria-live="polite"></p>
+
+            <!-- Las tarjetas (cada una en un <li>) se generan desde js/catalogo.js -->
+            <ul id="catalog-grid" class="catalog-grid"></ul>
+        </section>
+
+    </main>
+
+    <footer class="container-footer">
+        <h3>No hacemos muebles para una temporadas, los hacemos para que los herede quien venga después.</h3>
+        <!-- NAVEGACION FOOTER -->
+        <section class="footer-nav">
+            <h3>Navegación</h3>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="./html/catalogo.html">Catálogo</a></li>
+                    <li><a href="./html/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </section>
+    
+        <!-- CONTACTO -->
+        <section class="footer-contact">
+            <h3>Contacto</h3>
+    
+            <address>
+                <p>Av.San Juan 2847, San Cristóbal, CABA</p>
+                <p>+541145678900</p>
+                <p>info@hermanosjota.com.ar</p>
+            </address>
+    
+        </section>
+    
+        <!-- HORARIOS -->
+        <section class="footer-hours">
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes: 10:00hs a 19:00hs</p>
+            <p>Sábados: 10:00hs a 14:00hs </p>
+        </section>
+    
+        <section class="footer-copy">
+            <p>&copy; 2026 Hermanos Jota - Casa Taller. Todos los derechos reservados.</p>
+        </section>
+    </footer>
+
+    <script type="module" src="../js/catalogo.js"></script>
+</body>
+
+</html>

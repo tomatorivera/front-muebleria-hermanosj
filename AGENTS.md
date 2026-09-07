@@ -11,6 +11,7 @@ Construir un e-commerce estático, responsivo y accesible con HTML, CSS y JavaSc
 - Usar datos locales, DOM, `addEventListener` y JavaScript legible.
 - Reutilizar funciones y clases solo cuando reduzca duplicación real.
 - No incorporar funcionalidades fuera del alcance de la consigna.
+- Para cambios de interfaz, consultar `docs/manual-marca.md`.
 
 ## Al trabajar en una tarea
 

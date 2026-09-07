@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Producto - Mueblería Hermanos Jota</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/producto.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="container-nav">
+      <!-- LOGO -->
+      <a href="index.html" class="logo-nav">
+        <img src="../assets/images/logo.svg" alt="Logo">
+        <div class="text-nav">
+          <h2>Hermanos Jota</h2>
+          <p>Muebleria artesanal</p>
+        </div>
+      </a>
+  
+      <!-- NAVEGACION PRINCIPAL-->
+      <ul class="items-nav">
+        <li>
+          <a href="../index.html">Inicio</a>
+        </li>
+        <li>
+          <a href="catalogo.html">Catálogo</a>
+        </li>
+        <li>
+          <a href="contacto.html">Contacto</a>
+        </li>
+      </ul>
+  
+      <!-- CARRITO -->
+      <a href="carrito.html" class="cart-button">Carrito</a>
+  
+    </nav>
+  </header>
+
+  <main id="product-page">
+    <img id="image-product" />
+
+    <article>
+        <h1 id="titulo-producto"></h1>
+
+        <p id="description-product"></p>
+        <p id="price-product"></p>
+
+        <button id="carrito">Agregar al carrito</button>
+
+        <section id="details-product">
+          <table id="especificaciones"></table>
+        </section>
+    </article>
+
+    <section id="not-found" style="display: none;">
+      <h2>Producto no encontrado</h2>
+      <p>No hemos encontrado el producto que estás buscando.</p>
+      <a href="../index.html">Volver al catálogo</a>
+    </section>
+  </main>
+
+<footer class="container-footer">
+      <h3>No hacemos muebles para una temporadas, los hacemos para que los herede quien venga después.</h3>
+      <!-- NAVEGACION FOOTER -->
+      <section class="footer-nav">
+        <h3>Navegación</h3>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./catalogo.html">Catálogo</a></li>
+            <li><a href="./contacto.html">Productos</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="footer-contact">
+        <h3>Contacto</h3>
+
+        <address>
+          <p>Av.San Juan 2847, San Cristóbal, CABA</p>
+          <p>+541145678900</p>
+          <p>info@hermanosjota.com.ar</p>
+        </address>
+
+      </section>
+
+      <!-- HORARIOS -->
+      <section class="footer-hours">
+        <h3>Horarios</h3>
+        <p>Lunes a Viernes: 10:00hs a 19:00hs</p>
+        <p>Sábados: 10:00hs a 14:00hs </p>
+      </section>
+
+      <section class="footer-copy">
+        <p>&copy; 2026 Hermanos Jota - Casa Taller. Todos los derechos reservados.</p>
+      </section>
+    </footer>
+  <script type="module" src="../js/product.js"></script>
+</body>
+
+</html>
