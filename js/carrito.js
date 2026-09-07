@@ -1,4 +1,5 @@
 import { getCart, getCurrentQuantity, getTotalPrice, clearCart, updateProductQuantity, removeProductFromCart, addProductToCart } from "./interfaces/cart.js"
+import "./badge.js";
 
 const emptyCartSection = document.getElementById('empty-cart');
 const notEmptyCartSection = document.getElementById('not-empty-cart');
