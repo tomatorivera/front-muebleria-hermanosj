@@ -39,7 +39,7 @@ const products = [
     id: "butaca-mendoza",
     name: "Butaca Mendoza",
     price: 45230,
-    image: ".//assets/images/butaca-mendoza.png",
+    image: "../assets/images/butaca-mendoza.png",
     description:
       "Butaca tapizada en bouclé Dusty Rose con base de madera de guatambú. El respaldo curvo abraza el cuerpo y ofrece máximo confort, mientras que su diseño orgánico aporta calidez y sofisticación a cualquier ambiente contemporáneo.",
     details: [
