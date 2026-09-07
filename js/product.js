@@ -1,6 +1,7 @@
 
 import { getProductById } from "./interfaces/products.js";
 import { addProductToCart } from "./interfaces/cart.js";
+import { actualizarBadge } from "./badge.js";
 
 const page = document.getElementById("product-page");
 
@@ -17,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProduct(product);
 });
 
+
+
 function renderProduct(product) {
   document.title = `${product.name} - Mueblería Hermanos Jota`;
   const titulo = document.querySelector('#titulo-producto');
@@ -29,14 +32,10 @@ function renderProduct(product) {
   const precio = document.querySelector('#price-product');
   precio.textContent = `$ ${product.price}`;
   
-  const carrito = document.querySelector('#carrito');
-  let cantidadCarrito = 0;
-  const agregarProducto = carrito.addEventListener('click', function(){
-  cantidadCarrito++;
-  carrito.textContent = cantidadCarrito;
-  addProductToCart(product);
-  })
-  carrito.textContent = agregarProducto;
+  carrito.addEventListener('click', function () {
+    addProductToCart(product);
+    actualizarBadge();
+  });
 
   const tabla = document.querySelector("#especificaciones");
   product.details.forEach((detail) => {
