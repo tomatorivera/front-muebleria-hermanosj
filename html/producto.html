@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Producto - Mueblería Hermanos Jota</title>
+
+  <link rel="stylesheet" href="../css/producto.css" />
+</head>
+
+<body>
+  <!-- Todo: agregar header y footer -->
+
+  <main id="product-page">
+    <img id="image-product" />
+
+    <article>
+        <h1 id="titulo-producto"></h1>
+
+        <p id="description-product"></p>
+        <p id="price-product"></p>
+
+        <button id="carrito">Agregar al carrito</button>
+
+        <section id="details-product">
+          <table id="especificaciones"></table>
+        </section>
+    </article>
+
+    <section id="not-found" style="display: none;">
+      <h2>Producto no encontrado</h2>
+      <p>No hemos encontrado el producto que estás buscando.</p>
+      <a href="../index.html">Volver al catálogo</a>
+    </section>
+  </main>
+
+  <script type="module" src="../js/product.js"></script>
+</body>
+
+</html>
