@@ -11,15 +11,34 @@
 </head>
 
 <body>
-  <!-- Todo: agregar nav y footer -->
   <header>
-      <img src="../assets/images/logo.svg" alt="Logo de Mueblería Hermanos Jota" class="logo">
-      <nav>
-          <a href="../index.html" class="nav-link">Inicio</a>
-          <a href="../html/catalogo.html" class="nav-link">Catalogo</a>
-          <a href="../html/contacto.html" class="nav-link">Contacto</a>
-          <a href="../html/carrito.html" class="cart-button nav-link-active">Carrito</a>
-      </nav>
+    <nav class="container-nav">
+      <!-- LOGO -->
+      <a href="index.html" class="logo-nav">
+        <img src="../assets/images/logo.svg" alt="Logo">
+        <div class="text-nav">
+          <h2>Hermanos Jota</h2>
+          <p>Muebleria artesanal</p>
+        </div>
+      </a>
+  
+      <!-- NAVEGACION PRINCIPAL-->
+      <ul class="items-nav">
+        <li>
+          <a href="../index.html">Inicio</a>
+        </li>
+        <li>
+          <a href="catalogo.html">Catálogo</a>
+        </li>
+        <li>
+          <a href="contacto.html">Contacto</a>
+        </li>
+      </ul>
+  
+      <!-- CARRITO -->
+      <a href="carrito.html" class="btn-carrito">Carrito</a>
+  
+    </nav>
   </header>
   <main class="cart-page">
     <section class="cart-heading" aria-labelledby="cart-title">
